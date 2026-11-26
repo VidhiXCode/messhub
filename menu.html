@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weekly menu | MessHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body id="menu">
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="assets/images/bennett-logo.png" alt="Bennett University logo"><span>MessHub</span></a>
+      <nav>
+      <a href="index.html">Today</a>
+      <a href="menu.html" class="active">Weekly menu</a>
+      <a href="feedback.html">Rate a meal</a>
+      <a href="ratings.html">Ratings</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h1>Weekly menu</h1>
+      <p class="lead">Choose a day and a meal, or search for a dish.</p>
+      <input id="search" type="search" placeholder="Search a dish, e.g. paneer">
+      <div class="row" id="days"></div>
+      <div class="row" id="meals"></div>
+      <h2 id="heading"></h2>
+      <div class="grid" id="grid"></div>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">MessHub - Web Development mini-project, Bennett University.</div>
+  </footer>
+</body>
+</html>

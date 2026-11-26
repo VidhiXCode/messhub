@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rate a meal | MessHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body id="feedback">
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="assets/images/bennett-logo.png" alt="Bennett University logo"><span>MessHub</span></a>
+      <nav>
+      <a href="index.html">Today</a>
+      <a href="menu.html">Weekly menu</a>
+      <a href="feedback.html" class="active">Rate a meal</a>
+      <a href="ratings.html">Ratings</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h1>Rate a meal</h1>
+      <p class="lead">Rate from 1 (poor) to 5 (excellent) and tell us why.</p>
+      <form id="fbForm" class="form" novalidate>
+        <div><label for="name">Name</label><input id="name" name="name" type="text" placeholder=""><p class="err" id="name-err"></p></div>
+        <div><label for="enroll">Enrollment number</label><input id="enroll" name="enroll" type="text" placeholder="S26CSEU0276"><p class="err" id="enroll-err"></p></div>
+        <div><label for="day">Day</label><select id="day" name="day"></select></div>
+        <div><label for="meal">Meal</label><select id="meal" name="meal"></select></div>
+        <fieldset class="wide">
+          <legend>Your rating</legend>
+          <div class="rate"><label><input type="radio" name="rating" value="1">1</label><label><input type="radio" name="rating" value="2">2</label><label><input type="radio" name="rating" value="3">3</label><label><input type="radio" name="rating" value="4">4</label><label><input type="radio" name="rating" value="5">5</label><span id="ratingWord"></span></div>
+          <p class="err" id="rating-err"></p>
+        </fieldset>
+        <div class="wide">
+          <label for="comment">Your feedback</label>
+          <textarea id="comment" name="comment" rows="4" maxlength="300"></textarea>
+          <small id="count">0 / 300</small>
+          <p class="err" id="comment-err"></p>
+        </div>
+        <div class="wide"><button class="btn" type="submit">Send feedback</button><p class="ok" id="ok"></p></div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">MessHub - Web Development mini-project, Bennett University.</div>
+  </footer>
+</body>
+</html>

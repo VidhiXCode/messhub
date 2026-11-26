@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Today | MessHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body id="home">
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="assets/images/bennett-logo.png" alt="Bennett University logo"><span>MessHub</span></a>
+      <nav>
+      <a href="index.html" class="active">Today</a>
+      <a href="menu.html">Weekly menu</a>
+      <a href="feedback.html">Rate a meal</a>
+      <a href="ratings.html">Ratings</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h1 id="title">Today's menu</h1>
+      <p class="lead">Live time: <span id="clock"></span>. A meal is highlighted in blue only during its serving time.</p>
+      <p class="status" id="status"></p>
+      <div class="grid" id="grid"></div>
+      <div class="row">
+        <a class="btn" href="menu.html">See the full week</a>
+        <a class="btn light" href="feedback.html">Rate a meal</a>
+        <button class="btn light" id="surprise">Surprise me</button>
+      </div>
+      <p class="ok" id="pick"></p>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">MessHub - Web Development mini-project, Bennett University.</div>
+  </footer>
+</body>
+</html>

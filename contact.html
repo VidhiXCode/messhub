@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | MessHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body id="contact">
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="assets/images/bennett-logo.png" alt="Bennett University logo"><span>MessHub</span></a>
+      <nav>
+      <a href="index.html">Today</a>
+      <a href="menu.html">Weekly menu</a>
+      <a href="feedback.html">Rate a meal</a>
+      <a href="ratings.html">Ratings</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h1>Contact us</h1>
+      <p class="lead">School of Computer Science Engineering and Technology, Bennett University, Greater Noida, Uttar Pradesh.</p>
+      <form id="ctForm" class="form" novalidate>
+        <div><label for="name">Name</label><input id="name" name="name" type="text" placeholder=""><p class="err" id="name-err"></p></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="text" placeholder=""><p class="err" id="email-err"></p></div>
+        <div class="wide"><label for="message">Message</label><textarea id="message" name="message" rows="5"></textarea><p class="err" id="message-err"></p></div>
+        <div class="wide"><button class="btn" type="submit">Send message</button><p class="ok" id="ok"></p></div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">MessHub - Web Development mini-project, Bennett University.</div>
+  </footer>
+</body>
+</html>

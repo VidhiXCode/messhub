@@ -1,0 +1,73 @@
+/* Colours: white background, dark blue for everything else */
+:root { --blue: #0a2463; --text: #14213d; --grey: #5b6785; --line: #d6dcec; --light: #eef2fb; }
+* { box-sizing: border-box; margin: 0; }
+body { background: #fff; color: var(--text); font-family: "Archivo", Arial, sans-serif; line-height: 1.6; }
+a { color: var(--blue); }
+.wrap { width: min(1100px, 92%); margin: auto; }
+
+/* Header and navigation (Flexbox) */
+header { border-bottom: 1px solid var(--line); position: sticky; top: 0; background: #fff; z-index: 5; }
+header .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 12px 0; }
+.logo { display: flex; align-items: center; gap: 10px; font-size: 1.4rem; font-weight: 800; color: var(--blue); text-decoration: none; }
+.logo img { height: 62px; width: auto; }
+nav a { padding: 6px 14px; border-radius: 20px; text-decoration: none; color: var(--grey); }
+nav a:hover { background: var(--light); }
+nav a.active { background: var(--blue); color: #fff; }
+
+main { padding: 50px 0 60px; min-height: 70vh; }
+h1 { font-size: clamp(2.4rem, 8vw, 5rem); color: var(--blue); line-height: 1; letter-spacing: -2px; }
+h2 { color: var(--blue); margin-bottom: 8px; }
+.lead { color: var(--grey); margin: 16px 0 28px; max-width: 55ch; }
+footer { border-top: 1px solid var(--line); padding: 20px 0; color: var(--grey); font-size: .9rem; }
+
+/* Cards (Grid) */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-bottom: 28px; }
+.card { border: 1px solid var(--line); border-radius: 16px; padding: 20px; transition: transform .2s, box-shadow .2s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(10, 36, 99, .15); }
+.card ul { list-style: none; padding: 0; margin-top: 10px; }
+.card li { padding: 6px 0; border-top: 1px solid var(--line); }
+.card small { color: var(--grey); }
+.card.now { background: var(--blue); color: #fff; }
+.card.now h2, .card.now small, .card.now li { color: #fff; border-color: #4a5f9a; }
+.badge { background: #fff; color: var(--blue); font-size: .75rem; padding: 2px 10px; border-radius: 12px; margin-left: 6px; }
+
+/* Buttons */
+.btn, .chip { font: inherit; border: 1px solid var(--blue); background: var(--blue); color: #fff; padding: 9px 20px; border-radius: 24px; cursor: pointer; text-decoration: none; display: inline-block; }
+.btn:hover { background: #1b3a8a; }
+.btn.light, .chip { background: #fff; color: var(--blue); }
+.chip { padding: 6px 14px; }
+.chip:hover { background: var(--light); }
+.chip.on { background: var(--blue); color: #fff; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+
+/* Forms */
+.form { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; max-width: 760px; }
+.wide { grid-column: 1 / -1; }
+label, legend { display: block; font-weight: 600; margin-bottom: 4px; color: var(--blue); }
+fieldset { border: 0; padding: 0; }
+input, select, textarea { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid #9aa7cc; border-radius: 10px; }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--blue); }
+.bad { border: 2px solid #c1121f; }
+.err { color: #c1121f; font-size: .9rem; min-height: 1.3rem; }
+.ok { color: var(--blue); font-weight: 600; margin-top: 12px; }
+.rate { display: flex; gap: 8px; align-items: center; }
+.rate label { width: 44px; height: 44px; border: 1px solid var(--blue); border-radius: 50%; display: grid; place-items: center; cursor: pointer; margin: 0; }
+.rate label:hover { background: var(--light); }
+.rate input { position: absolute; opacity: 0; width: 1px; }
+.rate label:has(input:checked) { background: var(--blue); color: #fff; }
+#ratingWord { color: var(--blue); font-weight: 600; margin-left: 8px; }
+
+/* Ratings page */
+.big { font-size: clamp(3rem, 10vw, 5rem); font-weight: 800; color: var(--blue); line-height: 1; }
+.bar { display: grid; grid-template-columns: 90px 1fr 40px; gap: 14px; align-items: center; margin: 14px 0; }
+.track { height: 18px; background: var(--light); border-radius: 10px; overflow: hidden; }
+.fill { height: 100%; background: var(--blue); animation: grow .8s; }
+@keyframes grow { from { width: 0; } }
+.list { list-style: none; padding: 0; max-width: 760px; margin-bottom: 16px; }
+.list li { padding: 12px 0; border-top: 1px solid var(--line); }
+section { margin-top: 40px; }
+#search { max-width: 360px; margin-bottom: 16px; }
+#clock { font-size: 1.6rem; font-weight: 700; color: var(--blue); }
+
+/* Status line on the home page */
+.status { font-weight: 600; color: var(--blue); margin-bottom: 20px; }
